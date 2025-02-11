@@ -39,9 +39,9 @@ public class UserService {
                 .orElseThrow(() -> new IllegalArgumentException("사용자 ID 또는 비밀번호가 잘못되었습니다."));
 
         // 비밀번호 검증
-        if (!bCryptPasswordEncoder.matches(userRequestDTO.getPassword(), user.getPassword())) {
-            throw new IllegalArgumentException("사용자 ID 또는 비밀번호가 잘못되었습니다.");
-        }
+//        if (!bCryptPasswordEncoder.matches(userRequestDTO.getPassword(), user.getPassword())) {
+//            throw new IllegalArgumentException("사용자 ID 또는 비밀번호가 잘못되었습니다.");
+//        }
 
         // 응답 DTO 생성 및 반환
         UserResponseDTO responseDTO = new UserResponseDTO();
