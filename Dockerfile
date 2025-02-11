@@ -25,6 +25,6 @@ RUN ./gradlew clean build --no-daemon -x test
 FROM openjdk:17-alpine
 WORKDIR /myapp
 #프로젝트 빌드로 생성된 jar파일을 런타임 이미지로 복사
-COPY --from=build /myapp/build/libs/*.jar /myapp/userservice.jar
+COPY --from=build /myapp/build/libs/userservice.jar /myapp/userservice.jar
 EXPOSE 5002
 ENTRYPOINT ["java","-jar","userservice.jar"]

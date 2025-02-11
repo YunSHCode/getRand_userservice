@@ -43,3 +43,7 @@ dependencyManagement {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+jar {
+    archiveFileName = 'userservice.jar' // 빌드 결과 JAR 파일 이름
+}
