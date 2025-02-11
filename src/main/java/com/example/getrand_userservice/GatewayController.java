@@ -17,7 +17,7 @@ public class GatewayController {
 
     @GetMapping("/test")
     public String test() {
-        return "test";
+        return "test1";
     }
 
     @PostMapping("/register")
